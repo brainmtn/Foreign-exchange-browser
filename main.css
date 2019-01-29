@@ -8,17 +8,24 @@
         background-color: #fff;
         font-weight: 600;
     }
+
+    .information h2{
+        font-size: 2rem;
+    }
     .information h2, p{
         color: #003299;
-        font-weight: 600;
         padding-left: 10%;
+    }
+    .exchangeInfo p,
+    .information p{
+        font-size: 1.5rem;
     }
     table{
         margin: 0 auto;
         padding: 0;
         border: 0;
         outline: 0;
-        font-size: 30px;
+        font-size: 3rem;
         vertical-align: baseline;
         background: 0 0;
         box-sizing: border-box;
@@ -37,12 +44,23 @@
         background-color: #fff;
         font-weight: 600;
     }
+    .information h2{
+        font-size: 2rem;
+    }
+    .information h2, p{
+        color: #003299;
+        padding-left: 10%;
+    }
+    .exchangeInfo p,
+    .information p{
+        font-size: 1.5rem;
+    }
     table{
         margin: 0 auto;
         padding: 0;
         border: 0;
         outline: 0;
-        font-size: 30px;
+        font-size: 3rem;
         vertical-align: baseline;
         background: 0 0;
         box-sizing: border-box;
@@ -60,12 +78,25 @@
         margin: auto;
         background-color: #fff;
     }    
+
+    .information h2{
+        font-size: 2rem;
+    }
+    .information h2, p{
+        color: #003299;
+        padding-left: 10%;
+    }
+    .exchangeInfo p,
+    .information p{
+        font-size: 1.5rem;
+    }
+
     table{
         margin: 0 auto;
         padding: 0;
         border: 0;
         outline: 0;
-        font-size: 30px;
+        font-size: 3rem;
         vertical-align: baseline;
         background: 0 0;
         box-sizing: border-box;
@@ -83,7 +114,7 @@
         width: 900px;
         margin: auto;
         background-color: #fff;
-   }
+    }
    table{
     margin: 0 auto;
     padding: 0;
@@ -100,7 +131,28 @@
     width: 80%;
 }
 }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
+    .wrapper{
+        width: 900px;
+        margin: auto;
+        background-color: #fff;
+    }
+    table{
+        margin: 0 auto;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: 0 0;
+        box-sizing: border-box;
+        background-color: white;
+        border-collapse: collapse;
+        border-spacing: 0;
+        font-weight: 400px;
+        width: 80%;
+    }
+}
 
 
 
@@ -140,12 +192,17 @@ body{
     text-align: center;
 }
 
+.information h2{
+    font-size: 2rem;
+}
 .information h2, p{
     color: #003299;
-    font-weight: 500;
     padding-left: 10%;
 }
-
+.exchangeInfo p,
+.information p{
+    font-size: 1.5rem;
+}
 
 table{
     margin: 0 auto;
@@ -161,12 +218,6 @@ table{
     border-spacing: 0;
     font-weight: 400px;
     width: 80%;
-}
-
-.exchangeInfo p{
-    font-size: 11px;
-    padding-left: 10%;
-    text-align: left;
 }
 
 .curStyle{
