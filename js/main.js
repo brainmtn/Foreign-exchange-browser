@@ -2,7 +2,7 @@
 
 // set endpoint and your access key
 let endpoint = 'latest'
-let access_key = '5217eee1bec5875bae3ea3d548d84643';
+let access_key = 'API KEY';
 
 //  API request for currency to website
 $(document).ready(function() {
