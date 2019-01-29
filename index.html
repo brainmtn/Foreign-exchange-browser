@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="text/html">
+    <title>Currency</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="information">
+            <h1>Exchange browser</h1>
+            <p> Foreign exchange rate.</p>
+            <h2 id="date"></h2>            
+            <p>
+                Search exchange rate for an older date: </br>
+                 <input type='date' name="searchDate" id="searchDate" max="Date()"> </input>
+                    <input type="submit" value="Search" onclick="searchExchange()"></input>
+            </p>
+            <p id="noRates"></p>
+
+        </div>
+        
+         <div class="exchangeInfo">
+             <p>Currencies below are quoted against the euro (base currency)</p>
+         </div>
+        <table id="exchange">
+            <thead>
+            <tr>
+                
+                <th class="cur" onclick="sortTable(0)"><a href="#">Currency</a></th>
+                <th class="cur" onclick="sortTable(0)"><a href="#" class="sort-by">Name</a></th>
+                
+                <th class="rates"onclick="sortTable(2)"><a href="#" class="sort-by">Rate</a></th>
+            </tr>
+        </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

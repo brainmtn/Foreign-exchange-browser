@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>USD Rate</title>
+  </head>
+  <body>
+    <p>USD: <span id="rate_usd"></span></p>
+    <p>JPY: <span id="rate_JPY"></span></p>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script>
+      $(function() {
+        $.getJSON('http://data.fixer.io/api/latest?access_key=5217eee1bec5875bae3ea3d548d84643&symbols=USD,JPY,SEK,DKK', 
+            function(data) {
+                var usdRate = data.rates.USD.toString();
+                var commaFormatted = usdRate.replace('.', ',')
+                var jpyRate = data.rates.JPY.toString();
+                var commaFormatted = jpyRate.replace('.', ',')
+                document.getElementById('rate_usd').innerHTML = commaFormatted;
+                document.getElementById('rate_JPY').innerHTML = commaFormatted;
+            });
+        });
+    </script>
+  </body>
+</html>
