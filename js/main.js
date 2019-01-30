@@ -12,11 +12,14 @@ $(document).ready(function() {
     url: 'http://data.fixer.io/api/' + endpoint + '?access_key=' + access_key,
     dataType: 'json',
     success: function(json) {
-        // exchange rata data is stored in json.rates
+        // exchange rate data is stored in json.rates and date in json.date
         let rates = json.rates;
         let today = json.date;
+
+        // Types for what day the rates are showing
         document.getElementById('date').innerHTML = "Foreign exchange rate for: " + today;
 
+        // for-loop that takes json.rate and creates a table for them to show inside
         for (const rate in rates) {
             var table = document.getElementById("tbody");
             var row = table.insertRow();
@@ -44,7 +47,8 @@ $(document).ready(function() {
     success: function(json) {
         // exchange rata data is stored in json.rates
         let symbols = json.symbols;
-        
+
+        // for-loop that takes symbols (currency name) and adds them to the table
         for (const symbol in symbols) {
             var cell2 = document.getElementById(`${symbol}`);
             if (cell2.id === `${symbol}`){
@@ -60,7 +64,6 @@ function searchExchange() {
     let searchDate = document.getElementById('searchDate');
     
     $(document).ready(function() {
-        // put all your jQuery goodness in here.
         // get the most recent exchange rates via the "latest" endpoint:
         searchDate = searchDate.value;
         $.ajax({
@@ -103,6 +106,7 @@ function searchExchange() {
         }
     });
 });
+
 //  API request for symbols to website
 $(document).ready(function() {
     // put all your jQuery goodness in here.
@@ -190,10 +194,13 @@ function sortTable(n) {
     }
 }
 
+// Getting todays date to show in the homepage
 var today = new Date();
 var dd = today.getDate();
 var mm = today.getMonth()+1; //January is 0!
 var yyyy = today.getFullYear();
+
+// If loop to get the correct the date with months
 if(dd<10){
     dd='0'+dd
 } 
