@@ -154,15 +154,13 @@
     }
 }
 
-
-
-
 @media (min-width:1281px) {
     /* hi-res laptops and desktops */ 
     .wrapper{
         width: 1000px;
         margin: auto;
         background-color: #fff;
+        border-radius: 25px;
    }
 }
 
@@ -190,6 +188,11 @@ body{
     color: #fff;
     margin-top: 0; 
     text-align: center;
+    border-radius: 5px;
+}
+
+.information p{
+    font-size: 1.5rem;
 }
 
 .information h2{
@@ -199,10 +202,10 @@ body{
     color: #003299;
     padding-left: 10%;
 }
-.exchangeInfo p,
-.information p{
-    font-size: 1.5rem;
+.exchangeInfo p {
+    font-size: 0.8rem;
 }
+
 
 table{
     margin: 0 auto;
